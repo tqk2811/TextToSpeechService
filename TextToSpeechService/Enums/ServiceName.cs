@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TextToSpeechService.Enums
 {
-    public enum TextToSpeechService
+    public enum ServiceName
     {
         Google,
     }

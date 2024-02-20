@@ -7,6 +7,6 @@ namespace TextToSpeechService.Interfaces
         string Name { get; }
         string LanguageCode { get; }
         Gender Gender { get; }
-        Enums.TextToSpeechService Service { get; }
+        ServiceName Service { get; }
     }
 }

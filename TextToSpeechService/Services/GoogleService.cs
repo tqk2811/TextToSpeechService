@@ -45,7 +45,7 @@ namespace TextToSpeechService.Services
             var res = await client.ListVoicesAsync(languageCode, cancellationToken);
             IReadOnlyList<IVoice> voices = res.Voices
                 .Where(x => x.SsmlGender == SsmlVoiceGender.Male || x.SsmlGender == SsmlVoiceGender.Female)
-                .Select(x => new Classes.Voice(x.Name, languageCode, x.SsmlGender switch { SsmlVoiceGender.Male => Gender.Male, _ => Gender.Female, }, Enums.TextToSpeechService.Google))
+                .Select(x => new Classes.Voice(x.Name, languageCode, x.SsmlGender switch { SsmlVoiceGender.Male => Gender.Male, _ => Gender.Female, }, ServiceName.Google))
                 .ToList();
             return voices;
         }

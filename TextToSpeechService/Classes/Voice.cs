@@ -6,7 +6,7 @@ namespace TextToSpeechService.Classes
 {
     internal class Voice : IVoice
     {
-        public Voice(string name, string languageCode, Gender gender, Enums.TextToSpeechService service)
+        public Voice(string name, string languageCode, Gender gender, ServiceName service)
         {
             if (string.IsNullOrWhiteSpace(name)) throw new ArgumentNullException(nameof(name));
             if (string.IsNullOrWhiteSpace(languageCode)) throw new ArgumentNullException(nameof(languageCode));
@@ -18,6 +18,6 @@ namespace TextToSpeechService.Classes
         public string Name { get; }
         public string LanguageCode { get; }
         public Gender Gender { get; }
-        public Enums.TextToSpeechService Service { get; }
+        public ServiceName Service { get; }
     }
 }
