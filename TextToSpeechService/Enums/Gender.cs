@@ -8,6 +8,8 @@ namespace TextToSpeechService.Enums
 {
     public enum Gender
     {
+        Unknow,
+        Neutral,
         Male,
         Female
     }
